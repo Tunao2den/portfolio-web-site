@@ -3,48 +3,50 @@
 }
 
 .home__container {
-    row-gap: 7rem;
+    row-gap: 16rem;
 }
 
 .home__content {
-    grid-template-columns: 116px repeat(2, 1fr);
-    padding-top: 5.5rem;
-    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    /*padding-top: 5.5rem;*/
+    margin-top: 17rem;
+    column-gap: 8rem;
     align-items: center;
 }
 
-.home__social {
-    display: grid;
-    grid-template-columns: max-content;
-    row-gap: 1rem;
-}
+.home__data {
+    /*margin-left: 7rem;*/
+    /*text-align: center;*/
+    justify-self: flex-end;
 
-.home__social-icon {
-    font-size: 1.25rem;
-    color: var(--title-color);
-}
-
-.home__social-icon:hover {
-    color: var(--title-color-dark);
 }
 
 .home__title {
     font-size: var(--big-font-size);
-    margin-bottom: var(--mb-0-25);
+    margin-bottom: var(--mb-1-5);
+    display: initial;
+}
+
+.button--flex {
+    margin-top: 4rem;
+    /*margin-left: 8rem;*/
 }
 
 .home__hand {
-    width: 30px;
-    height: 30px;
-    margin-left: .4rem;
+    width: 50px;
+    height: 50px;
+    margin-left: 1.2rem;
+    margin-bottom: .8rem;
 }
 
 .home__subtitle {
+    display: flex;
     position: relative;
+    align-items: center;
+    /*justify-content: center;*/
     font-size: var(--h3-font-size);
     padding-left: 5.4rem;
     font-weight: var(--font-normal);
-    margin-bottom: var(--mb-1);
 }
 
 .home__subtitle::before {
@@ -54,7 +56,64 @@
     height: 1px;
     background-color: var(--text-color);
     left: 0;
-    top: 1rem;
+    top: 1.1rem;
+}
+
+.home__subtitle span {
+    margin-left: 7px;
+    position: relative;
+}
+
+.home__subtitle span::before {
+    content: "Mathematical Enginner";
+    color: var(--title-color-dark);
+    font-weight: bold;
+    animation: words 20s infinite;
+}
+
+.home__subtitle span::after {
+    content: "";
+    position: absolute;
+    width: calc(50% + 8px);
+    height: 110%;
+    background-color: var(--container-color);
+    border-left: 2px solid var(--title-color-dark);
+    right: -5px;
+    animation: cursor .8s linear infinite, typing 20s steps(18) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid var(--title-color-dark);
+    }
+}
+
+@keyframes words {
+    0%, 20%{
+        content: "full-stack developer"; /*20*/
+    }
+    21%, 40%{
+        content: "continuous learner"; /*18*/
+    }
+    41%, 60%{
+        content: "team player"; /*11*/
+    }
+    61%, 80%{
+        content: "analytical thinker";/*18*/
+    }
+    81%, 100%{
+        content: "quick adapter"; /*13*/
+    }
+}
+
+@keyframes typing {
+    10%, 14%, 31%, 34%, 52%, 55%, 71%, 75%, 91%, 95% {
+        width: 0;
+    }
+
+    0%, 20%, 25%, 40%, 46%, 60%, 62%, 80%, 82%, 100%{
+        width: calc(100% + 8px);
+    }
 }
 
 .home__description {
@@ -63,7 +122,7 @@
 }
 
 .home__img {
-    background: url(D:/programming/portfolio/portfolio-web-site/assets//linkedinPP.jpg);
+    background: url(D:/programming/portfolio/portfolio-web-site/public/linkedinPP.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -90,8 +149,11 @@
 }
 
 .home__scroll {
-    margin-left: 9.25rem;
+    text-align: center;
+}
 
+.home__scroll-button {
+    text-decoration: none;
 }
 
 .wheel {
@@ -130,8 +192,12 @@
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
+    .home__data {
+        margin-left: 4rem;
+    }
+
     .home__content {
-        grid-template-columns: 70px repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 1.25rem;
     }
 
@@ -170,7 +236,7 @@
 /* For medium devices */
 @media screen and (max-width: 768px) {
     .home__content {
-        grid-template-columns: 0.5fr 3fr;
+        grid-template-columns: repeat(2, 1fr);
         padding-top: 3.5rem;
     }
 

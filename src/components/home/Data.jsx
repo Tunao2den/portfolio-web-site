@@ -50,10 +50,9 @@ const Data = () => {
                 </svg>
             </h1>
 
-            <h3 className="home__subtitle">Mathematical Engineer</h3>
-            <p className="home__description">
-                Aims to enhance a career in full-stack development.
-            </p>
+            <h3 className="home__subtitle">
+                I am a <span></span>
+            </h3>
 
             <a href="#contact" className="button button--flex">
                 Say Hello

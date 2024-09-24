@@ -9,12 +9,11 @@ const Home = () => {
         <section className="home seciton" id="home">
             <div className="home__container container grid">
                 <div className="home__content grid">
-                    <Social />
                     <div className="home__img"></div>
-                    <Data />
+                    <Data/>
                 </div>
 
-                <ScrollDown />
+                <ScrollDown/>
             </div>
         </section>
     )

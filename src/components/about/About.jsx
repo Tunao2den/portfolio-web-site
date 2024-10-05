@@ -15,7 +15,7 @@ const About = () => {
             <h2 className="section__title">About Me</h2>
             <div className="section__subtitle">
                 <div className="about__text">
-                    Senior Mathematical Engineering student eager to advance a career in Backend Programming. Coding skills
+                    Senior Mathematical Engineering student eager to advance a career in Full-Stack Development. Coding skills
                     have been developed through various projects and internships. Active roles in projects have enhanced teamwork
                     and communication skills.
                 </div>

@@ -108,4 +108,7 @@
 
 /* For small devices */
 @media screen and (max-width: 350px) {
+    .qualification__sections {
+        grid-template-columns: 1.2fr;
+    }
 }

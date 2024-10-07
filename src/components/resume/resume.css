@@ -53,3 +53,11 @@
         margin-bottom: -10rem;
     }
 }
+
+@media screen and (max-width: 350px) {
+    .resume__pdf {
+        transform: scale(0.45);
+        margin-top: -16rem;
+        margin-bottom: -14rem;
+    }
+}

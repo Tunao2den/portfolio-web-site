@@ -7,6 +7,7 @@
 }
 
 .about__text {
+    margin-top: -3rem;
     padding: 2rem;
     text-align: center;
     font-size:  var(--h3-font-size);
@@ -128,6 +129,17 @@
     }
 
     .about__description {
+        padding: 0;
+    }
+    .section__title {
+        padding-top: 1rem;
+    }
+
+    .section__subtitle {
+        padding: 1rem;
+    }
+
+    .about__text {
         padding: 0;
     }
 }

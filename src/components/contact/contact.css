@@ -3,6 +3,7 @@
     justify-content: center;
     column-gap: 6rem;
     padding-bottom: 3rem;
+    justify-items: center;
 }
 
 .contact__title {
@@ -10,6 +11,7 @@
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1-5);
+    padding: 3.5rem;
 }
 
 .contact__info {
@@ -24,6 +26,7 @@
     padding: 1rem;
     border-radius: 0.75rem;
     text-align: center;
+    min-height: 11rem;
 }
 
 .contact__card-icon {
@@ -54,6 +57,7 @@
     align-items: center;
     justify-content: center;
     column-gap: 0.25rem;
+    margin-top: 2rem;
 }
 
 .contact__button-icon {
@@ -65,8 +69,14 @@
     transform: translate(0.25rem);
 }
 
+.contact__info {
+    justify-content: center;
+}
+
 .contact__form {
     width: 360px;
+    align-self: center;
+    justify-self: center;
 }
 
 .contact__form-div {
@@ -97,7 +107,7 @@
     left: 1.25rem;
     font-size: var(--smaller-font-size);
     padding: .25rem;
-    background-color: var(--body-color);
+    background-color: var(--container-color);
     z-index: 10;
 }
 
@@ -121,14 +131,18 @@
     .contact__container {
         grid-template-columns: 1fr;
         row-gap: 3rem;
+        max-width: 100%;  /* Container genişliğini ekrana göre sınırla */
+        padding: 0 1rem;
     }
 
     .contact__info {
         justify-content: center;
+
     }
 
     .contact__form {
-        margin: 0 auto  ;
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -139,6 +153,19 @@
 
     .contact__form {
         width: 100%;
+    }
+
+    .contact__title {
+        margin-bottom: 0;
+        padding: 1rem;
+    }
+
+    .contact__container {
+        margin-top: -2.5rem;
+    }
+
+    .button--flex {
+        margin-top: .5rem;
     }
 }
 

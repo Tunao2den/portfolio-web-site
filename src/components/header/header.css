@@ -1,7 +1,6 @@
 .header{
     width: 100%;
     position: fixed;
-    padding: 0rem 19rem 0rem 19rem;
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
@@ -35,7 +34,9 @@
 }
 
 .nav__link {
+    background-color: var(--body-color);
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     font-size: var(--small-font-size);
@@ -43,6 +44,10 @@
     font-weight: var(--font-medium);
     transition: .3s;
     text-decoration: none;
+}
+
+.nav__item {
+    justify-self: center;
 }
 
 .nav__icon,
@@ -67,7 +72,9 @@
     }
 
     .nav__logo {
-        position: static;
+        /*position: flex-end;*/
+        /*display: flex-end;*/
+        justify-self: flex-end;
     }
 
     .nav {

@@ -54,7 +54,7 @@ const Data = () => {
                 I am a <span></span>
             </h3>
 
-            <a href="#contact" className="button button--flex">
+            <a href="#contact" className="button button--flex_home">
                 Say Hello
                 <svg className="button__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path

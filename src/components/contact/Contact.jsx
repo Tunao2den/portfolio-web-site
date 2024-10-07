@@ -26,7 +26,7 @@ const Contact = () => {
     return (
         <section className="contact section" id="contact">
             <h2 className="section__title">Get in touch</h2>
-            <span className="section__subtitle">Contact me</span>
+            {/*<span className="section__subtitle">Contact me</span>*/}
 
             <div className="contact__container container grid">
                 <div className="contact__content">
@@ -45,25 +45,25 @@ const Contact = () => {
                             </a>
                         </div>
 
-                        <div className="contact__card">
-                            <i className="bx bxl-whatsapp contact_card-icon"></i>
+                        {/*<div className="contact__card">*/}
+                        {/*    <i className="bx bxl-whatsapp contact_card-icon"></i>*/}
 
-                            <h3 className="contact_card-title">Whatsapp</h3>
-                            <span className="contact__card-data">11111111</span>
+                        {/*    <h3 className="contact_card-title">Whatsapp</h3>*/}
+                        {/*    <span className="contact__card-data">11111111</span>*/}
 
-                            <a href="" className="contact__button">
-                                Write me{" "}
-                                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-                            </a>
-                        </div>
+                        {/*    <a href="" className="contact__button">*/}
+                        {/*        Write me{" "}*/}
+                        {/*        <i className="bx bx-right-arrow-alt contact__button-icon"></i>*/}
+                        {/*    </a>*/}
+                        {/*</div>*/}
 
                         <div className="contact__card">
                             <i className="bx bxl-linkedin contact_card-icon"></i>
 
                             <h3 className="contact_card-title">Linkedin</h3>
-                            <span className="contact__card-data">yigittunaozden</span>
+                            {/*<span className="contact__card-data">/yigittunaozden</span>*/}
 
-                            <a href="" className="contact__button">
+                            <a href="https://www.linkedin.com/in/yigittunaozden/" className="contact__button">
                                 Write me{" "}
                                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
                             </a>
@@ -74,7 +74,7 @@ const Contact = () => {
                 <div className="contact__content">
                     <h3 className="contact__title">Write me your message</h3>
 
-                    <form ref={form} onSubmit={sendEmail} action="" className="contact__form-div">
+                    <form ref={form} onSubmit={sendEmail} action="" className="contact__form">
                         <div className="contact__form-div">
                             <label htmlFor="" className="contact__form-tag">Mail</label>
                             <input type="email" name="email" className="contact__form-input"
@@ -107,7 +107,6 @@ const Contact = () => {
                             </svg>
                         </button>
                     </form>
-
 
                 </div>
             </div>

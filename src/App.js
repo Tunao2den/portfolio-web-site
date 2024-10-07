@@ -6,23 +6,35 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import ScrollUp from "./components/scrollup/ScrollUp";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
+import Resume from "./components/resume/Resume";
 
 function App() {
-  return (
-      <div className="container">
-          <Header/>
+    return (
+        <div className="container">
+            <BrowserRouter>
+                <Header/>
+                <Routes>
+                    <Route path="/" element={
+                        <main className="main">
+                            <Home/>
+                            <About/>
+                            <Projects/>
+                            <Contact/>
+                        </main>
+                    }> </Route>
 
-          <main className="main">
-              <Home/>
-              <About/>
-              <Projects/>
-              <Contact/>
-          </main>
+                    <Route path="/resume" element={
+                        <Resume/>
+                    }></Route>
+                </Routes>
+                <Footer/>
+                <ScrollUp/>
+            </BrowserRouter>
 
-          <Footer/>
-          <ScrollUp/>
-      </div>
-  );
+
+        </div>
+    );
 }
 
 export default App;

@@ -30,6 +30,10 @@
     margin-bottom: var(--mb-2);
 }
 
+.footer__link {
+    background-color: var(--container-color);
+}
+
 .footer__social {
     display: flex;
     justify-content: center;
@@ -70,7 +74,15 @@
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+    .footer {
+        position: relative;
+        background-color: var(--container-color);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
 
+    /*.footer__container {*/
+    /*    padding-top: 30rem;*/
+    /*}*/
 }
 
 @media screen and (max-width: 576px) {

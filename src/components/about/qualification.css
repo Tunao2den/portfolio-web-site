@@ -33,7 +33,7 @@
 
 .qualification__sections {
     display: grid;
-    grid-template-columns: 0.5fr;
+    grid-template-columns: 0.7fr;
     justify-content: center;
 }
 
@@ -101,9 +101,11 @@
 }
 
 @media screen and (max-width: 576px) {
+    .qualification__sections {
+        grid-template-columns: 0.8fr;
+    }
 }
 
 /* For small devices */
 @media screen and (max-width: 350px) {
-
 }

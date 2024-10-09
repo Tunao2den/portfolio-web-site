@@ -116,7 +116,7 @@
 }
 
 .home__img {
-    background: url("/linkedinPP.jpg");
+    background: url("/src/components/home/linkedinPP.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -1,13 +1,26 @@
-import React, { useRef } from 'react';
+import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import "./contact.css"
 
 const Contact = () => {
 
     const form = useRef();
+    const [message, setMessage] = useState('');
+    const [isVisible, setIsVisible] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
+
+        const email = form.current.email.value.trim();
+        const name = form.current.name.value.trim();
+        const project = form.current.project.value.trim();
+
+        if (!email || !name || !project) {
+            setMessage('Failed. All fields are required.');
+            setIsVisible(true);
+            hideMessage();
+            return;
+        }
 
         emailjs
             .sendForm('service_j29rju5', 'template_osnrxt8', form.current, {
@@ -15,12 +28,25 @@ const Contact = () => {
             })
             .then(
                 () => {
+                    setMessage('Email sent successfully!');
+                    setIsVisible(true);
+                    hideMessage();
+                    e.target.reset();
                     console.log('SUCCESS!');
                 },
                 (error) => {
+                    setMessage('Failed to send email. Please try again.');
+                    setIsVisible(true);
+                    hideMessage();
                     console.log('FAILED...', error.text);
                 },
             );
+    };
+
+    const hideMessage = () => {
+        setTimeout(() => {
+            setIsVisible(false);
+        }, 3000);
     };
 
     return (
@@ -45,23 +71,10 @@ const Contact = () => {
                             </a>
                         </div>
 
-                        {/*<div className="contact__card">*/}
-                        {/*    <i className="bx bxl-whatsapp contact_card-icon"></i>*/}
-
-                        {/*    <h3 className="contact_card-title">Whatsapp</h3>*/}
-                        {/*    <span className="contact__card-data">11111111</span>*/}
-
-                        {/*    <a href="" className="contact__button">*/}
-                        {/*        Write me{" "}*/}
-                        {/*        <i className="bx bx-right-arrow-alt contact__button-icon"></i>*/}
-                        {/*    </a>*/}
-                        {/*</div>*/}
-
                         <div className="contact__card">
                             <i className="bx bxl-linkedin contact_card-icon"></i>
 
                             <h3 className="contact_card-title">Linkedin</h3>
-                            {/*<span className="contact__card-data">/yigittunaozden</span>*/}
 
                             <a href="https://www.linkedin.com/in/yigittunaozden/" className="contact__button">
                                 Write me{" "}
@@ -107,7 +120,11 @@ const Contact = () => {
                             </svg>
                         </button>
                     </form>
-
+                    {isVisible && (
+                        <div className={`contact__alert-box ${message.includes('Failed') ? 'error' : 'success'}`}>
+                            {message}
+                        </div>
+                    )}
                 </div>
             </div>
 

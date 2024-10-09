@@ -119,6 +119,34 @@
     resize: none;
 }
 
+.contact__alert-box {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: var(--font-medium);
+    bottom: 20px;
+    background-color: rgba(24, 128, 27, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    z-index: 1000;
+    animation: fadeOut 3s forwards;
+}
+
+.error {
+    background-color: rgba(182, 31, 18, 0.8);
+}
+
+.success {
+    background-color: rgba(24, 128, 27, 0.8);
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 /* For large devices */
 @media screen and (max-width: 992px) {
     .contact__container {
@@ -131,7 +159,7 @@
     .contact__container {
         grid-template-columns: 1fr;
         row-gap: 3rem;
-        max-width: 100%;  /* Container genişliğini ekrana göre sınırla */
+        max-width: 100%;
         padding: 0 1rem;
     }
 

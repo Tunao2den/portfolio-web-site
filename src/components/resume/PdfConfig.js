@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Document, Page } from 'react-pdf';
-import pdf from "./YİĞİT_TUNA_ÖZDEN_CV_2024.pdf"
+import pdf from "./YİĞİT TUNA ÖZDEN CV 2025.pdf"
 
 function PdfConfig() {
     const [numPages, setNumPages] = useState();

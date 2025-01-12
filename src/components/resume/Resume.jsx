@@ -2,7 +2,7 @@ import React from "react";
 import "./resume.css"
 import { pdfjs } from 'react-pdf';
 import PdfConfig from "./PdfConfig";
-import CV from './YİĞİT_TUNA_ÖZDEN_CV_2024.pdf';
+import CV from './YİĞİT TUNA ÖZDEN CV 2025.pdf';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',

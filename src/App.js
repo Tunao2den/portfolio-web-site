@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import ScrollUp from "./components/scrollup/ScrollUp";
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
 import Resume from "./components/resume/Resume";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={
                         <main className="main">
+                            <Analytics/>
                             <Home/>
                             <About/>
                             <Projects/>

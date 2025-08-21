@@ -10,10 +10,8 @@ const About = () => {
             <h2 className="section__title">About Me</h2>
             <div className="section__subtitle">
                 <div className="about__text">
-                    I am a Senior Mathematical Engineering student with a strong interest in software engineering.
-                    I am eager to learn new technologies, adapt quickly to changing environments, and continuously
-                    improve myself.
-                    My focus is on growing both personally and professionally through hands-on experience and learning.
+                    Mathematical Engineering graduate focused on software development. Highly motivated self learner with personal
+                    projects and professional experience in Java and Databases.
                 </div>
 
                 <div className="tech__stack">

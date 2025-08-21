@@ -6,7 +6,7 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import ScrollUp from "./components/scrollup/ScrollUp";
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Resume from "./components/resume/Resume";
 import { Analytics } from "@vercel/analytics/react"
 

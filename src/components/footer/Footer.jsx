@@ -72,9 +72,9 @@ const Footer = () => {
                     </a>
                 </div>
 
-                <span
-                    className="footer__copy"> &#169; Tuna. All rights reserved.
-                </span>
+                {/*<span*/}
+                {/*    className="footer__copy"> &#169; Tuna. All rights reserved.*/}
+                {/*</span>*/}
             </div>
         </footer>
     )

@@ -84,7 +84,7 @@
 
 @keyframes words {
     0%, 20%{
-        content: "full-stack developer"; /*20*/
+        content: "software developer"; /*20*/
     }
     21%, 40%{
         content: "continuous learner"; /*18*/

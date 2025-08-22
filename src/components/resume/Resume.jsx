@@ -15,7 +15,7 @@ const Resume = () => {
             <h2 className="section__title">Resume</h2>
             <div className="resume__container container">
                 <div className="resume__content">
-                    <div className="resume__pdf">
+                    <div>
                         <PdfConfig/>
                     </div>
                     <div className="download__resume">
